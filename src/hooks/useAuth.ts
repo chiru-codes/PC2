@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
 
+const API_BASE_URL = 'http://pc2-matricula-alb-2123051620.us-east-1.elb.amazonaws.com';
+
 export function useAuth() {
     const [isLogged, setIsLogged] = useState<boolean>(false);
     const [apiKey, setApiKey] = useState<string>('');
-    const [loaded, setLoaded] = useState<boolean>(false); // 👈 NUEVO
+    const [loaded, setLoaded] = useState<boolean>(false);
 
     useEffect(() => {
         const storedKey = localStorage.getItem('apiKey');
@@ -15,7 +17,7 @@ export function useAuth() {
     }, []);
 
     const login = async (key: string) => {
-        const response = await fetch('http://localhost:8080/validar', {
+        const response = await fetch(`${API_BASE_URL}/students/`, {
             headers: {
                 'x-api-key': key,
             },

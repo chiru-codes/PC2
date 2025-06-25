@@ -1,9 +1,12 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import LoginPage from '../pages/LoginPage';
 import DashboardPage from '../pages/DashboardPage';
-import CharacterListPage from '../pages/CharacterListPage';
-import CharacterFormPage from '../pages/CharacterFormPage';
-import CharacterDetailPage from '../pages/CharacterDetailPage';
+import GradesList from '../pages/GradesList';
+import GradeFormPage from '../pages/GradeFormPage.tsx';
+import StudentGrades from '../pages/StudentGrades';
+import SubjectGrades from '../pages/SubjectGrades';
+import GradeStatistics from '../pages/GradeStatistics';
+import GradeHistory from '../pages/GradeHistory';
 import ProtectedRoute from './ProtectedRoutes';
 import ProtectedLayout from '../layouts/ProtectedLayout';
 import NotFoundPage from "../pages/NotFoundPage.tsx";
@@ -23,9 +26,12 @@ function AppRouter() {
                 }
             >
                 <Route path="/dashboard" element={<DashboardPage />} />
-                <Route path="/characters" element={<CharacterListPage />} />
-                <Route path="/characters/new" element={<CharacterFormPage />} />
-                <Route path="/characters/:id" element={<CharacterDetailPage />} />
+                <Route path="/grades" element={<GradesList />} />
+                <Route path="/grades/new" element={<GradeFormPage />} />
+                <Route path="/grades/student/:id" element={<StudentGrades />} />
+                <Route path="/grades/subject/:id" element={<SubjectGrades />} />
+                <Route path="/reports" element={<GradeStatistics />} />
+                <Route path="/history" element={<GradeHistory />} />
             </Route>
 
             <Route path="*" element={<NotFoundPage />} />

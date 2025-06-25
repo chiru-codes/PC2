@@ -30,7 +30,7 @@ function Login() {
         <div className="bg-white/80 flex flex-col items-center gap-4 p-6 rounded-2xl shadow-2xl w-[350px] border border-blue-800/30">
             <div className="flex flex-col items-center">
                 <img src="/cat_icon.png" alt="Logo" className="w-16 h-auto" />
-                <h2 className="text-lg font-bold text-blue-800">CatCharacter</h2>
+                <h2 className="text-lg font-bold text-blue-800">Cat-Sistema Académico</h2>
                 <p className="text-xs text-gray-500">Ingresa tu API Key para continuar</p>
             </div>
 

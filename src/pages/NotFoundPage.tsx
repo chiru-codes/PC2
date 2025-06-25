@@ -16,7 +16,7 @@ function NotFoundPage() {
                 <img src={cat404} alt="Gatito perdido" className="w-64 h-auto mb-6" />
                 <h1 className="text-4xl font-bold text-red-600 mb-2">404 - Página no encontrada</h1>
                 <p className="text-yellow-400 mb-4 font-semibold">
-                    Parece que este gatito se ha perdido en el mar
+                    Parece que este alumno se ha perdido en el mar
                 </p>
                 <Link
                     to="/dashboard"
